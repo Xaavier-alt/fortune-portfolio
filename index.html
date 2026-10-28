@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="steel">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Joe-Ugwu Fortune — Mechatronics Engineer &amp; Cybersecurity Analyst</title>
+<meta name="theme-color" content="#13151a">
+<meta name="description" content="Portfolio of Joe-Ugwu Fortune, mechatronics engineer and cybersecurity analyst in Port Harcourt, Nigeria.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=DM+Sans:wght@400;500&family=JetBrains+Mono:wght@400;500&family=Orbitron:wght@500..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="booting">
+<!--
+  PHOTOS: every element with data-img="images/..." shows a placeholder until you add that file.
+  1. Make a folder called "images" next to this file.
+  2. Save your photos there using the exact names below (jpg).
+  3. Refresh the page. No code changes needed.
+     profile.jpg                      your portrait (square works best)
+     card-1.jpg to card-6.jpg         the six fan cards (awards, projects, team)
+     kw-home.jpg, kw-pentest.jpg,
+     kw-control.jpg, kw-xylex.jpg     popups on the underlined words
+     xylex-1.jpg to xylex-3.jpg       game screenshots on the Xylex console screen
+-->
+<div id="boot"><pre id="boot-text"></pre><p>Click anywhere to skip</p></div>
+<div id="bar"></div><div class="spot" id="spot"></div>
+<div class="dot" id="dot"></div><div class="ring" id="ring"></div>
+<div class="frame" aria-hidden="true"></div><div class="scan" aria-hidden="true"></div><div id="flash" aria-hidden="true"></div>
+<div class="hud hud-l" aria-hidden="true"><span class="live"></span>SYS ONLINE <b id="fps">60</b> FPS</div>
+<div class="hud hud-r"><span>LVL <b id="lvl">1</b></span><div class="xp"><i></i></div><span><b id="ach">0</b>/10 ★</span></div>
+<div class="toasts" id="toasts" aria-live="polite"></div>
+
+<main>
+  <section class="hero" id="top">
+    <canvas id="field" aria-hidden="true"></canvas>
+    <div class="gridfloor" aria-hidden="true"></div>
+    <div class="stage" id="stage" role="button" tabindex="0" aria-label="Change the typeface style">
+      <h1 id="brand" data-text="Fortune" aria-label="Fortune">Fortune<span id="bl"></span></h1>
+      <div class="gl" id="g-cap"><span>Cap height</span></div>
+      <div class="gl" id="g-x"><span>x-height</span></div>
+      <div class="gl" id="g-base"><span>Baseline</span></div>
+      <div class="gl" id="g-desc"><span>Descender</span></div>
+    </div>
+    <div class="stylebar"><span id="style-name">Light 300</span><span>Tap the name to change style</span></div>
+    <p class="tagline" data-scramble>Mechatronics engineer and cybersecurity analyst. Abuja, Nigeria.</p>
+    <p class="hint">Move through the dots. Click to burst them. Press T to change the theme. Know the Konami code?</p>
+  </section>
+
+  <div class="ticker" aria-hidden="true"><div class="track" id="track">
+    <span>Penetration testing</span><span>Control systems</span><span>Game development</span><span>Security automation</span><span>Startup founder</span><span>Hardware integration</span>
+  </div></div>
+
+  <section class="curtain" id="curtain" aria-label="Profile">
+    <div class="stick">
+      <div class="profile" id="profile">
+        <div class="ph round" data-img="images/profile.jpg" data-hint="Add images/profile.jpg"></div>
+        <p>Hello, I’m</p>
+        <h2 class="big">Joe-Ugwu Fortune</h2>
+        <p>Founder of Xylex Gaming Incorporation. Open to engineering roles and security work.</p>
+        <div class="stats">
+          <div><b data-n="1">0</b><span>hackathon title</span></div>
+          <div><b data-n="2">0</b><span>monthly awards</span></div>
+          <div><b data-n="3">0</b><span>active roles</span></div>
+          <div><b data-n="6">0</b><span>core skills</span></div>
+        </div>
+      </div>
+      <canvas id="cloth" aria-label="Interactive curtain. Drag it, or keep scrolling to open it."></canvas>
+      <div class="hand" id="hand-l" role="img" aria-label="Tiny gamer hand pulling the curtain"><div class="w"><svg viewBox="0 0 64 74" width="56" height="65" aria-hidden="true"><g class="fing"><polygon points="14,38 14,16 18,11 24,11 24,38"/><polygon points="24,38 24,8 28,3 34,3 34,38"/><polygon points="34,38 34,12 38,7 44,7 44,38"/><polygon points="44,38 44,20 47,16 52,16 52,38"/></g><polygon class="pm" points="12,36 54,36 56,60 46,72 20,72 10,60"/><polygon class="th" points="12,46 2,38 0,28 6,26 15,36"/><polyline class="fc" points="14,22 24,22 24,14 34,14 34,20 44,20 44,26 52,26"/><polyline class="fc" points="20,44 33,40 46,44"/><rect class="cuff" x="18" y="68" width="30" height="5"/><circle class="led" cx="33" cy="54" r="3"/></svg></div></div>
+      <div class="hand r" id="hand-r" role="img" aria-label="Tiny gamer hand pulling the curtain"><div class="w"><svg viewBox="0 0 64 74" width="56" height="65" aria-hidden="true"><g class="fing"><polygon points="14,38 14,16 18,11 24,11 24,38"/><polygon points="24,38 24,8 28,3 34,3 34,38"/><polygon points="34,38 34,12 38,7 44,7 44,38"/><polygon points="44,38 44,20 47,16 52,16 52,38"/></g><polygon class="pm" points="12,36 54,36 56,60 46,72 20,72 10,60"/><polygon class="th" points="12,46 2,38 0,28 6,26 15,36"/><polyline class="fc" points="14,22 24,22 24,14 34,14 34,20 44,20 44,26 52,26"/><polyline class="fc" points="20,44 33,40 46,44"/><rect class="cuff" x="18" y="68" width="30" height="5"/><circle class="led" cx="33" cy="54" r="3"/></svg></div></div>
+      <div class="scrollhint" id="shint">Grab the curtain, or keep scrolling to open it</div>
+    </div>
+  </section>
+
+  <section class="prologue" id="about">
+    <h2 data-scramble>Prologue</h2>
+    <p>I’m a mechatronics engineer and cybersecurity analyst in <button class="kw" data-u="wavy" data-art="a1" data-img="images/kw-home.jpg" data-cap="Home base: Abuja, Nigeria">Abuja</button>. I run <button class="kw" data-u="dotted" data-art="a3" data-img="images/kw-pentest.jpg" data-cap="Web app assessments since 2024">ethical penetration tests</button> so weak spots get fixed, work on <button class="kw" data-u="double" data-art="a5" data-img="images/kw-control.jpg" data-cap="Hardware integration at Poseidon Energy">control systems</button> that keep hardware honest, and currently lead <button class="kw" data-u="wavy" data-art="a4" data-img="images/kw-xylex.jpg" data-cap="Founded 2025: original game prototypes">Xylex Gaming Incoporation</button>, a gaming studio I founded.</p>
+  </section>
+
+  <section class="fanwrap">
+    <h2 data-scramble>Wins and milestones</h2>
+    <div class="stack" id="stack" aria-label="Achievement cards. Tap to spread or stack. Drag a card when spread.">
+      <div class="pc"><div class="art ph a1" data-img="images/card-1.jpg" data-hint="Add images/card-1.jpg"></div><div class="cap">Hackathon winner, 2024</div></div>
+      <div class="pc"><div class="art ph a2" data-img="images/card-2.jpg" data-hint="Add images/card-2.jpg"></div><div class="cap">Innovation award, 2025 (Fabrication of an Autonomous Drug Dispensing Robot for Hospital use 🤖)</div></div>
+      <div class="pc"><div class="art ph a3" data-img="images/card-3.jpg" data-hint="Add images/card-3.jpg"></div><div class="cap">Intern of the Month</div></div>
+      <div class="pc"><div class="art ph a4" data-img="images/card-4.jpg" data-hint="Add images/card-4.jpg"></div><div class="cap">HOR of the Month</div></div>
+      <div class="pc"><div class="art ph a5" data-img="images/card-5.jpg" data-hint="Add images/card-5.jpg"></div><div class="cap">Xylex prototypes launched (Visit the Site 🌐)</div></div>
+      <div class="pc"><div class="art ph a6" data-img="images/card-6.jpg" data-hint="Add images/card-6.jpg"></div><div class="cap">Security toolkit built (In GitHub Repo 📎)</div></div>
+    </div>
+    <p class="sub">Drag any card once the pile spreads. First place at the Inter-University Cybersecurity Hackathon (2024). Tech Innovation and Entrepreneurship Award, University of Port Harcourt (2025).</p>
+  </section>
+
+  <section class="studio" id="studio">
+    <h2 data-scramble>Xylex Gaming Inc.</h2>
+    <p class="lead2">Xylex Gaming Incorporation is the independent game studio I founded in 2025, based in Abuja, Nigeria. I lead system architecture, character modelling, branding, and the game coding. Slide a cartridge into the console to boot it, and try Bug Hunt.</p>
+    <div class="console">
+      <div class="screen" id="screen"><div class="scr-in" id="scr-in"></div><canvas id="game" width="480" height="270" aria-label="Bug Hunt mini-game. Click the bugs."></canvas></div>
+      <div class="slot"></div>
+    </div>
+    <div class="carts" id="carts">
+      <button type="button" class="cart" data-cart="studio">STUDIO</button>
+      <button type="button" class="cart" data-cart="games">PROTOTYPES</button>
+      <button type="button" class="cart" data-cart="arcade">BUG HUNT</button>
+    </div>
+    <div class="actions"><a class="visit" data-mag href="https://xylexgaminginc.onrender.com" target="_blank" rel="noopener">Visit the Xylex site</a></div>
+  </section>
+
+  <section class="exp" id="experience">
+    <h2 data-scramble>Experience</h2>
+    <ol class="tl" id="tl">
+      <li style="--d:0ms"><b>Jun 2025 to now</b><strong>Founder and technical lead</strong><em>Xylex Gaming Incorporation</em><span>Leads an independent game studio: system architecture, coding and modelling, branding. Original prototypes still in development.</span></li>
+      <li style="--d:150ms"><b>Feb 2024 to now</b><strong>Cybersecurity analyst</strong><em>Independent</em><span>Vulnerability assessments and ethical penetration tests on web apps, plus automation scripts for monitoring and threat detection.(follow me on GitHub to see my works)</span></li>
+      <li style="--d:300ms"><b>Oct to Dec 2025</b><strong>Mechatronics intern</strong><em>Poseidon Energy Services Ltd.</em><span>System diagnostics, hardware integration and control-system testing. Named Intern of the Month and won the best HOR of the Month.</span></li>
+      <li style="--d:450ms"><b>2020 to 2026</b><strong>B.Eng Mechatronics Engineering</strong><em>University of Port Harcourt</em><span>Earlier: college degree at Sacred Heart Seminary, 2014 to 2020.</span></li>
+    </ol>
+  </section>
+
+  <section class="skillsec" id="skills">
+    <h2 data-scramble>Skills</h2>
+    <div class="skills">
+      <div class="sk"><i>🛡️</i><strong>Cybersecurity and pen testing</strong><span>Vulnerability assessments, ethical hacking, threat detection and mitigation.</span></div>
+      <div class="sk"><i>⚙️</i><strong>Mechatronics and control systems</strong><span>Hardware integration, automation testing, system diagnostics.</span></div>
+      <div class="sk"><i>🎮</i><strong>Game development</strong><span>Prototype design and game architecture.</span></div>
+      <div class="sk"><i>💡</i><strong>Leadership and project management</strong><span>Startup operations, team building, equity frameworks, roadmaps.</span></div>
+      <div class="sk"><i>🔐</i><strong>Security automation and scripting</strong><span>Custom tools for monitoring and system resilience.</span></div>
+      <div class="sk"><i>🧠</i><strong>Critical thinking and analysis</strong><span>Complex problem solving, communication, adaptability.</span></div>
+    </div>
+  </section>
+
+  <section class="term" id="terminal">
+    <h2 data-scramble>Run my résumé</h2>
+    <div class="win">
+      <div class="out" id="out" aria-live="polite"></div>
+      <form id="tform" autocomplete="off"><span>fortune@portfolio:~$</span><input id="tin" aria-label="Type a command" spellcheck="false" autocapitalize="off"></form>
+    </div>
+    <div class="chips" id="chips">
+      <button type="button" data-cmd="about">about</button><button type="button" data-cmd="skills">skills</button><button type="button" data-cmd="experience">experience</button>
+      <button type="button" data-cmd="projects">projects</button><button type="button" data-cmd="awards">awards</button><button type="button" data-cmd="contact">contact</button><button type="button" data-cmd="achievements">achievements</button><button type="button" data-cmd="help">help</button>
+    </div>
+  </section>
+</main>
+
+<footer id="contact">
+  <h2>Let’s build something extraordinary</h2>
+  <p class="lead">Available for engineering roles, cybersecurity consulting, startup collaborations and technical partnerships.</p>
+  <!-- EMAIL: replace your-email@example.com in the next line (both places) -->
+  <button class="email" id="email" data-mag data-email="fortuneugwu2@gmail.com">fortuneugwu2@gmail.com</button>
+  <p class="note" id="note">Click to copy my email.</p>
+  <p class="phone">Phone: <a href="tel:+2348086776186">+234 808-677-6186</a></p>
+  <div class="social">
+    <a data-mag href="https://github.com/Xaavier-alt" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg></a>
+    <a data-mag href="https://x.com/Xaavier_alt" target="_blank" rel="noopener" aria-label="X"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+    <a data-mag href="https://instagram.com/joeugwu_fortune" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor"/></svg></a>
+    <a data-mag href="https://reddit.com/u/Careless-Speaker-760" target="_blank" rel="noopener" aria-label="Reddit"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="14" rx="8" ry="5.5"/><circle cx="8.8" cy="13.4" r="1.1" fill="currentColor"/><circle cx="15.2" cy="13.4" r="1.1" fill="currentColor"/><path d="M9.2 16.6c1.6 1 3.9 1 5.6 0"/><path d="M12 8.5l1-4.5 4 1"/><circle cx="18.2" cy="5.4" r="1.4"/><circle cx="3.6" cy="12" r="1.5"/><circle cx="20.4" cy="12" r="1.5"/></svg></a>
+    <a data-mag href="https://buymeacoffee.com/joeugwu_fortune" target="_blank" rel="noopener" aria-label="Buy me a coffee"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9h13v4.5a5 5 0 01-5 5h-3a5 5 0 01-5-5z"/><path d="M17 10h1.5a2.5 2.5 0 010 5H16.6"/><path d="M8 3v2M11 3v2M14 3v2"/></svg></a>
+    <a data-mag href="https://resume-joeugwu.vercel.app/assets/resume.pdf" target="_blank" rel="noopener" aria-label="CV (PDF)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4"/><path d="M9 12h6M9 15h6M9 18h4"/></svg></a>
+  </div>
+  <p class="copy">© 2026 Joe-Ugwu Fortune. Mechatronics engineer, Abuja, Nigeria.</p>
+</footer>
+
+<nav class="dock" id="dock" aria-label="Colour theme">
+  <button type="button" data-t="steel" aria-label="Steel theme" style="background:linear-gradient(135deg,#8d95a3,#5ce1ff)"></button>
+  <button type="button" data-t="cyber" aria-label="Cyber theme" style="background:linear-gradient(135deg,#00e5ff,#ff2e93)"></button>
+  <button type="button" data-t="arcade" aria-label="Arcade theme" style="background:linear-gradient(135deg,#39ff14,#ff00e6)"></button>
+  <button type="button" data-t="xylex" aria-label="Xylex green theme" style="background:linear-gradient(135deg,#35df36,#c6ff3d)"></button>
+  <button type="button" data-t="ember" aria-label="Ember theme" style="background:linear-gradient(135deg,#ff7a1a,#ffc233)"></button>
+  <button type="button" data-t="aurora" aria-label="Aurora theme" style="background:linear-gradient(135deg,#3dffb5,#8b7bff)"></button>
+  <button type="button" data-t="daylight" aria-label="Daylight theme" style="background:linear-gradient(135deg,#4f3bff,#ff5a7a)"></button>
+  <button type="button" class="perf" id="perf" aria-label="Performance mode: tap to switch auto, full or lite">AUTO</button>
+</nav>
+<div class="pol" id="pol" aria-hidden="true"><div class="art ph a1"></div><div class="cap"></div></div>
+<script src="script.js"></script>
+</body>
+</html>
