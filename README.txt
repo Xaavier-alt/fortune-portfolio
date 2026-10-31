@@ -5,5 +5,5 @@ Put your photos in this folder, named exactly like this (jpg):
   kw-pentest.jpg              popup for "ethical penetration tests"
   kw-control.jpg              popup for "control systems"
   kw-xylex.jpg                popup for "Xylex Gaming"
-  xylex-1.jpg ... xylex-3.jpg game screenshots shown on the Xylex console screen (PROTOTYPES cartridge)
+  xylex-1.webp ... xylex-3.webp game screenshots shown on the Xylex console screen (PROTOTYPES cartridge)
 Landscape or square photos around 600x500 work best. Refresh the page and they appear.

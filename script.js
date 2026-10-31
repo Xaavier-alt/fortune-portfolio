@@ -381,7 +381,7 @@ const SCREENS = {
 [SCREENS.studio]`,
   games: `PROTOTYPES
 Original games from concept to launch.
-<div class="thumbs"><div class="ph thumb a1" data-img="images/xylex-1.jpg" data-hint="Add images/xylex-1.jpg"></div><div class="ph thumb a3" data-img="images/xylex-2.jpg" data-hint="Add images/xylex-2.jpg"></div><div class="ph thumb a5" data-img="images/xylex-3.jpg" data-hint="Add images/xylex-3.jpg"></div></div>[SCREENS.games]`
+<div class="thumbs"><div class="ph thumb a1" data-img="images/xylex-1.webp" data-hint="Add images/xylex-1.webp"></div><div class="ph thumb a3" data-img="images/xylex-2.webp" data-hint="Add images/xylex-2.webp"></div><div class="ph thumb a5" data-img="images/xylex-3.webp" data-hint="Add images/xylex-3.webp"></div></div>`
 };
 let gOn = false, bugs = [], pops = [], score = 0, tLeft = 0, best = 0, gAnim = 0;
 try { best = +localStorage.getItem("bh") || 0; } catch {}
